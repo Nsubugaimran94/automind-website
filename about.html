@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Automind Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { blue: '#2563EB', lime: '#84CC16', emerald: '#10B981' } }, fontFamily: { sans: ['Inter','system-ui','sans-serif'] }, boxShadow: { 'glow-blue': '0 0 20px rgba(37,99,235,.45)', 'card': '0 4px 24px rgba(15,23,42,.08)' } } } }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .logo-badge { background: linear-gradient(135deg,#1e40af 0%,#2563EB 50%,#3b82f6 100%); box-shadow: 0 0 0 1px rgba(59,130,246,.3), 0 0 24px rgba(37,99,235,.5); }
+        .logo-badge::after { content:''; position:absolute; inset:-2px; border-radius:.75rem; background:linear-gradient(135deg,rgba(132,204,22,.4),rgba(37,99,235,.2)); filter:blur(8px); z-index:-1; opacity:.7; }
+        .img-fallback { background: linear-gradient(135deg,#1e293b 0%,#334155 100%); }
+        .nav-active { color: #2563EB; font-weight: 600; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+    <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="relative logo-badge w-10 h-10 md:w-11 md:h-11 rounded-xl flex items-center justify-center"><i data-lucide="brain" class="w-5 h-5 md:w-6 md:h-6 text-white"></i></div>
+                <div class="leading-tight"><span class="text-lg md:text-xl font-bold text-slate-900">Automind</span><span class="block text-[10px] md:text-xs font-semibold tracking-[0.15em] text-brand-blue uppercase">systems</span></div>
+            </a>
+            <div class="hidden lg:flex items-center gap-8 font-medium text-gray-600 text-sm">
+                <a href="about.html" class="nav-active">About Us</a>
+                <a href="services.html" class="hover:text-brand-blue transition-colors">Services</a>
+                <a href="solutions.html" class="hover:text-brand-blue transition-colors">Solutions</a>
+                <a href="blog.html" class="hover:text-brand-blue transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-brand-blue transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://audit-saas.vercel.app" class="hidden sm:inline-flex bg-brand-blue hover:bg-blue-700 text-white font-semibold text-sm px-4 md:px-5 py-2.5 rounded-lg transition-all">Run a Free Audit</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100" aria-label="Toggle menu"><i data-lucide="menu" class="w-5 h-5"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-1">
+            <a href="about.html" class="block px-3 py-2.5 rounded-lg text-brand-blue font-semibold bg-blue-50">About Us</a>
+            <a href="services.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Services</a>
+            <a href="solutions.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Solutions</a>
+            <a href="blog.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Blog</a>
+            <a href="contact.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Contact</a>
+            <a href="https://audit-saas.vercel.app" class="block mt-2 text-center bg-brand-blue text-white font-semibold px-4 py-3 rounded-lg">Run a Free Audit</a>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="bg-slate-900 text-white py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+                <p class="text-brand-lime text-xs font-bold uppercase tracking-widest mb-3">About Automind Systems</p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-5 leading-tight">Built to End Manual Logistics Bloat</h1>
+                <p class="text-gray-400 text-base md:text-lg leading-relaxed">We exist because freight forwarders and shipping companies are drowning in spreadsheets, emails, and disconnected systems. Automind Systems combines <strong class="text-white">developer-grade custom code</strong> with <strong class="text-white">cutting-edge AI automation</strong> to eliminate the manual work holding your operations back. We're also the makers of <strong class="text-white">AuditLog</strong>, our own product for auditing logistics invoices and supplier statements.</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-700 img-fallback">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85" alt="Team collaborating on logistics technology" class="w-full h-[260px] sm:h-[320px] object-cover" data-fallback="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hybrid Banner -->
+    <section class="bg-brand-lime/10 border-y border-brand-lime/20 py-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-brand-lime text-slate-900 font-bold text-sm px-4 py-2 rounded-full mb-4"><i data-lucide="zap" class="w-4 h-4"></i> Hybrid Technology Approach: Custom Code Power + AI Speed</div>
+            <p class="text-gray-700 text-sm md:text-base">We don't choose between no-code tools and custom development—we architect the right mix of <strong>Python, Node.js, Webhooks, REST APIs</strong> with <strong>OpenAI, Claude, Make.com &amp; Zapier</strong> for every client.</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-5">Why We Started</h2>
+                <p class="text-gray-600 mb-4 leading-relaxed">Logistics teams lose real hours every week to repetitive tasks—copying invoice data, checking carrier portals, replying to status emails. Off-the-shelf software rarely fits unique workflows, and pure no-code tools hit limits fast.</p>
+                <p class="text-gray-600 mb-4 leading-relaxed">Automind Systems was founded to bridge that gap: write the custom integrations your TMS and ERP need, then layer AI on top to read documents, classify emails, and trigger workflows automatically. AuditLog, our own product, grew directly out of this work — built and tested against real multi-year freight statements.</p>
+                <p class="text-gray-600 leading-relaxed">The result? Operations that run with developer reliability and AI speed—without hiring a full in-house engineering team.</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-card border border-gray-100 img-fallback">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85" alt="Logistics warehouse operations" class="w-full h-[280px] object-cover" data-fallback="https://images.unsplash.com/photo-1601584115077-6c23ce0663a9?auto=format&fit=crop&w=1200&q=85" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Pillars -->
+    <section class="bg-white py-16 md:py-24 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Our Core Pillars</h2>
+                <p class="text-gray-600">Two disciplines, one unified automation strategy.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8 shadow-card">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-2xl flex items-center justify-center mb-5"><i data-lucide="code-2" class="w-7 h-7"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Engineering Excellence — Custom Code</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">Production-grade Python and Node.js backends, REST API integrations, webhook listeners, and custom web dashboards built for your exact logistics stack.</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-blue"></i> Python &amp; Node.js custom backends</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-blue"></i> REST API &amp; Webhook integrations</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-blue"></i> TMS, ERP &amp; carrier system connectors</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8 shadow-card">
+                    <div class="w-14 h-14 bg-lime-100 text-lime-700 rounded-2xl flex items-center justify-center mb-5"><i data-lucide="sparkles" class="w-7 h-7"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Intelligent Automation — AI</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">LLM-powered document parsing, intelligent email routing, and no-code orchestration via Make.com and Zapier—deployed in days, not months.</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-lime"></i> OpenAI &amp; Claude LLM workflows</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-lime"></i> OCR + AI invoice &amp; document parsing</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-lime"></i> Make.com &amp; Zapier orchestration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="rounded-2xl overflow-hidden shadow-card border border-gray-100 img-fallback order-2 lg:order-1">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=85" alt="Developer writing custom automation code" class="w-full h-[280px] object-cover" data-fallback="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=85" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+            </div>
+            <div class="order-1 lg:order-2">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-5">Developer-Grade Reliability, AI-First Speed</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">Our culture blends software engineering rigor with rapid AI experimentation. Every automation is version-controlled, monitored, and documented—whether it's a custom Python script or a Make.com scenario with dozens of modules.</p>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="bg-white border border-gray-100 rounded-xl p-4 shadow-sm"><p class="text-2xl font-extrabold text-brand-blue mb-1">100%</p><p class="text-xs text-gray-500 font-medium">Custom-built, never templated</p></div>
+                    <div class="bg-white border border-gray-100 rounded-xl p-4 shadow-sm"><p class="text-2xl font-extrabold text-brand-emerald mb-1">1</p><p class="text-xs text-gray-500 font-medium">Live product shipped: AuditLog</p></div>
+                    <div class="bg-white border border-gray-100 rounded-xl p-4 shadow-sm"><p class="text-2xl font-extrabold text-brand-blue mb-1">Solo</p><p class="text-xs text-gray-500 font-medium">Founder-built, start to finish</p></div>
+                    <div class="bg-white border border-gray-100 rounded-xl p-4 shadow-sm"><p class="text-2xl font-extrabold text-brand-emerald mb-1">24/7</p><p class="text-xs text-gray-500 font-medium">Monitored automation uptime</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-slate-900 py-14">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Let's Build Your Hybrid Automation Stack</h2>
+            <p class="text-gray-400 mb-8 text-sm md:text-base">Tell us about your logistics workflows and we'll show you exactly where custom code and AI deliver the biggest impact.</p>
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-blue-700 text-white font-semibold px-6 py-3.5 rounded-lg transition-all">Schedule a Free Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-gray-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-14">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-10">
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="relative logo-badge w-9 h-9 rounded-lg flex items-center justify-center"><i data-lucide="brain" class="w-4 h-4 text-white"></i></div>
+                        <div class="leading-tight"><span class="text-white font-bold">Automind</span><span class="block text-[10px] font-semibold tracking-[0.15em] text-brand-blue uppercase">systems</span></div>
+                    </div>
+                    <p class="text-xs leading-relaxed max-w-xs">Automind Systems builds AuditLog and custom logistics automation. Python, Node.js, OpenAI, Claude, Make.com, Zapier &amp; REST APIs.</p>
+                </div>
+                <div><h4 class="text-white font-semibold text-sm mb-4">Quick Links</h4><ul class="space-y-2.5 text-xs"><li><a href="index.html" class="hover:text-white">Home</a></li><li><a href="about.html" class="hover:text-white">About Us</a></li><li><a href="services.html" class="hover:text-white">Services</a></li><li><a href="solutions.html" class="hover:text-white">Solutions</a></li></ul></div>
+                <div><h4 class="text-white font-semibold text-sm mb-4">Resources</h4><ul class="space-y-2.5 text-xs"><li><a href="blog.html" class="hover:text-white">Blog</a></li><li><a href="contact.html" class="hover:text-white">Contact</a></li><li><a href="#" class="hover:text-white">Privacy Policy</a></li><li><a href="#" class="hover:text-white">Terms of Service</a></li></ul></div>
+                <div><h4 class="text-white font-semibold text-sm mb-4">Contact Us</h4><ul class="space-y-3 text-xs"><li class="flex items-center gap-2.5"><i data-lucide="mail" class="w-4 h-4 text-brand-blue"></i><a href="mailto:hello@automindsystems.com" class="hover:text-white">hello@automindsystems.com</a></li><li class="flex items-center gap-2.5"><i data-lucide="phone" class="w-4 h-4 text-brand-blue"></i><a href="tel:0764190795" class="hover:text-white">0764190795</a></li><li class="flex items-center gap-2.5"><i data-lucide="clock" class="w-4 h-4 text-brand-blue"></i><span>Available 24/7</span></li></ul></div>
+            </div>
+            <div class="pt-6 border-t border-slate-800 text-xs flex flex-col sm:flex-row justify-between items-center gap-2"><p>&copy; 2025 Automind Systems. All rights reserved.</p><p class="text-gray-500">Custom Code + AI for logistics excellence</p></div>
+        </div>
+    </footer>
+    <script>lucide.createIcons(); document.getElementById('mobile-menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden');lucide.createIcons();});</script>
+</body>
+</html>

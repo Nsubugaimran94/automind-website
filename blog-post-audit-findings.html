@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside a Real Logistics Audit: What 39 Missing Invoice References Taught Us — Automind Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { blue: '#2563EB', lime: '#84CC16', emerald: '#10B981' } }, fontFamily: { sans: ['Inter','system-ui','sans-serif'] }, boxShadow: { 'card': '0 4px 24px rgba(15,23,42,.08)', 'card-hover': '0 12px 40px rgba(15,23,42,.12)' } } } }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .logo-badge { background: linear-gradient(135deg,#1e40af 0%,#2563EB 50%,#3b82f6 100%); box-shadow: 0 0 0 1px rgba(59,130,246,.3), 0 0 24px rgba(37,99,235,.5); }
+        .logo-badge::after { content:''; position:absolute; inset:-2px; border-radius:.75rem; background:linear-gradient(135deg,rgba(132,204,22,.4),rgba(37,99,235,.2)); filter:blur(8px); z-index:-1; opacity:.7; }
+        .img-fallback { background: linear-gradient(135deg,#1e293b 0%,#334155 100%); }
+        .nav-active { color: #2563EB; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+    <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="relative logo-badge w-10 h-10 md:w-11 md:h-11 rounded-xl flex items-center justify-center"><i data-lucide="brain" class="w-5 h-5 md:w-6 md:h-6 text-white"></i></div>
+                <div class="leading-tight"><span class="text-lg md:text-xl font-bold text-slate-900">Automind</span><span class="block text-[10px] md:text-xs font-semibold tracking-[0.15em] text-brand-blue uppercase">systems</span></div>
+            </a>
+            <div class="hidden lg:flex items-center gap-8 font-medium text-gray-600 text-sm">
+                <a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a>
+                <a href="services.html" class="hover:text-brand-blue transition-colors">Services</a>
+                <a href="solutions.html" class="hover:text-brand-blue transition-colors">Solutions</a>
+                <a href="blog.html" class="nav-active">Blog</a>
+                <a href="contact.html" class="hover:text-brand-blue transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://audit-saas.vercel.app" class="hidden sm:inline-flex bg-brand-blue hover:bg-blue-700 text-white font-semibold text-sm px-4 md:px-5 py-2.5 rounded-lg transition-all">Run a Free Audit</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100" aria-label="Toggle menu"><i data-lucide="menu" class="w-5 h-5"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-1">
+            <a href="about.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">About Us</a>
+            <a href="services.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Services</a>
+            <a href="solutions.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Solutions</a>
+            <a href="blog.html" class="block px-3 py-2.5 rounded-lg text-brand-blue font-semibold bg-blue-50">Blog</a>
+            <a href="contact.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Contact</a>
+            <a href="https://audit-saas.vercel.app" class="block mt-2 text-center bg-brand-blue text-white font-semibold px-4 py-3 rounded-lg">Run a Free Audit</a>
+        </div>
+    </nav>
+
+    <section class="bg-slate-900 text-white py-16 md:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <p class="text-brand-lime text-xs font-bold uppercase tracking-widest mb-3">Case Study</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-5">Inside a Real Logistics Audit: What 39 Missing Invoice References Taught Us</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">A breakdown of what our audit engine found when we ran it against a real multi-year freight statement.</p>
+        </div>
+    </section>
+
+    <main class="max-w-3xl mx-auto py-16 px-4 sm:px-6">
+        <article class="prose prose-lg text-gray-700 mx-auto">
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Why manual reconciliation breaks down</h2>
+            <p class="text-lg leading-relaxed">For many freight forwarders and logistics teams, reconciling carrier statements and invoices is a manual, spreadsheet-driven ritual. It scales poorly: a single multi-year account can contain thousands of rows, dozens of formats, and a host of human errors. Small mismatches — a mistyped invoice number, a shifted date column from an Excel export, or an inconsistent rate notation — slip past spot checks and quietly accumulate into material discrepancies.</p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What we did</h2>
+            <p class="text-lg leading-relaxed">To understand the failure modes, the audit engine was run against a real multi-year freight statement spanning 2020–2024. The dataset included hundreds of invoice line items across multiple carriers, with mixed Excel and CSV sources, legacy Excel-formatted exports, and manual journal entries. The goal was to surface mismatches, anomalous rates, and any silently corrupted fields that a human reviewer would likely miss.</p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What it found</h2>
+            <ul class="text-lg leading-relaxed space-y-2">
+                <li>39 payments that referenced invoice numbers with no matching invoice on file — payments appear to have been posted against missing or mis-labeled invoices.</li>
+                <li>Rate anomalies flagged per container by comparing each line against the account's median rates — a number of shipments showed rates 40–60% higher than the recent median for similar routes and container sizes.</li>
+                <li>A final balance discrepancy of 13,698 UGX that had gone unreconciled across multiple monthly closings.</li>
+                <li>Formatting issues, including Excel serial date bugs that had silently corrupted date fields during CSV round-trips, producing shifted dates or epoch-like numeric values in some rows.</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Why this matters</h2>
+            <p class="text-lg leading-relaxed">Each of these findings on its own might look small. Together they illustrate how errors compound over time. A missing invoice reference prevents automated matching and can mask duplicate payments; rate anomalies can inflate costs if unchecked; formatting bugs can break date-based accruals and aging reports. For accounts maintained by hand, these issues are effectively invisible until someone notices a material break in cash flow or an audit triggers a deep reconciliation.</p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Closing</h2>
+            <p class="text-lg leading-relaxed">Modern audit tooling that normalizes formats, validates references, and flags statistical outliers turns a guessing game into a repeatable process. For teams that run long-lived accounts, a periodic automated audit dramatically reduces risk and frees finance teams to act on exceptions rather than hunting for them.</p>
+
+            <div class="mt-8">
+                <a href="https://audit-saas.vercel.app" class="inline-flex items-center gap-3 bg-brand-blue text-white font-semibold px-5 py-3 rounded-lg hover:bg-blue-700">Run a Free Audit <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-slate-900 text-gray-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-14">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-10">
+                <div class="sm:col-span-2 lg:col-span-1"><div class="flex items-center gap-3 mb-4"><div class="relative logo-badge w-9 h-9 rounded-lg flex items-center justify-center"><i data-lucide="brain" class="w-4 h-4 text-white"></i></div><div class="leading-tight"><span class="text-white font-bold">Automind</span><span class="block text-[10px] font-semibold tracking-[0.15em] text-brand-blue uppercase">systems</span></div></div><p class="text-xs leading-relaxed max-w-xs">Automind Systems builds AuditLog and custom logistics automation. Python, Node.js, OpenAI, Claude, Make.com, Zapier &amp; REST APIs.</p></div>
+                <div><h4 class="text-white font-semibold text-sm mb-4">Resources</h4><ul class="space-y-2.5 text-xs"><li><a href="blog.html" class="hover:text-white">Blog</a></li><li><a href="contact.html" class="hover:text-white">Contact</a></li><li><a href="#" class="hover:text-white">Privacy Policy</a></li><li><a href="#" class="hover:text-white">Terms of Service</a></li></ul></div>
+                <div><h4 class="text-white font-semibold text-sm mb-4">Contact Us</h4><ul class="space-y-3 text-xs"><li class="flex items-center gap-2.5"><i data-lucide="mail" class="w-4 h-4 text-brand-blue"></i><a href="mailto:hello@automindsystems.com" class="hover:text-white">hello@automindsystems.com</a></li><li class="flex items-center gap-2.5"><i data-lucide="phone" class="w-4 h-4 text-brand-blue"></i><a href="tel:0764190795" class="hover:text-white">0764190795</a></li><li class="flex items-center gap-2.5"><i data-lucide="clock" class="w-4 h-4 text-brand-blue"></i><span>Available 24/7</span></li></ul></div>
+            </div>
+            <div class="pt-6 border-t border-slate-800 text-xs flex flex-col sm:flex-row justify-between items-center gap-2"><p>&copy; 2025 Automind Systems. All rights reserved.</p><p class="text-gray-500">Custom Code + AI for logistics excellence</p></div>
+        </div>
+    </footer>
+    <script>lucide.createIcons(); document.getElementById('mobile-menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden');lucide.createIcons();});</script>
+</body>
+</html>

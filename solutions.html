@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions &amp; Case Studies — Automind Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { blue: '#2563EB', lime: '#84CC16', emerald: '#10B981' } }, fontFamily: { sans: ['Inter','system-ui','sans-serif'] }, boxShadow: { 'card': '0 4px 24px rgba(15,23,42,.08)' } } } }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .logo-badge { background: linear-gradient(135deg,#1e40af 0%,#2563EB 50%,#3b82f6 100%); box-shadow: 0 0 0 1px rgba(59,130,246,.3), 0 0 24px rgba(37,99,235,.5); }
+        .logo-badge::after { content:''; position:absolute; inset:-2px; border-radius:.75rem; background:linear-gradient(135deg,rgba(132,204,22,.4),rgba(37,99,235,.2)); filter:blur(8px); z-index:-1; opacity:.7; }
+        .img-fallback { background: linear-gradient(135deg,#1e293b 0%,#334155 100%); }
+        .nav-active { color: #2563EB; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+    <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="relative logo-badge w-10 h-10 md:w-11 md:h-11 rounded-xl flex items-center justify-center"><i data-lucide="brain" class="w-5 h-5 md:w-6 md:h-6 text-white"></i></div>
+                <div class="leading-tight"><span class="text-lg md:text-xl font-bold text-slate-900">Automind</span><span class="block text-[10px] md:text-xs font-semibold tracking-[0.15em] text-brand-blue uppercase">systems</span></div>
+            </a>
+            <div class="hidden lg:flex items-center gap-8 font-medium text-gray-600 text-sm">
+                <a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a>
+                <a href="services.html" class="hover:text-brand-blue transition-colors">Services</a>
+                <a href="solutions.html" class="nav-active">Solutions</a>
+                <a href="blog.html" class="hover:text-brand-blue transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-brand-blue transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://audit-saas.vercel.app" class="hidden sm:inline-flex bg-brand-blue hover:bg-blue-700 text-white font-semibold text-sm px-4 md:px-5 py-2.5 rounded-lg transition-all">Run a Free Audit</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100" aria-label="Toggle menu"><i data-lucide="menu" class="w-5 h-5"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-1">
+            <a href="about.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">About Us</a>
+            <a href="services.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Services</a>
+            <a href="solutions.html" class="block px-3 py-2.5 rounded-lg text-brand-blue font-semibold bg-blue-50">Solutions</a>
+            <a href="blog.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Blog</a>
+            <a href="contact.html" class="block px-3 py-2.5 rounded-lg text-gray-700 font-medium hover:bg-gray-50">Contact</a>
+            <a href="https://audit-saas.vercel.app" class="block mt-2 text-center bg-brand-blue text-white font-semibold px-4 py-3 rounded-lg">Run a Free Audit</a>
+        </div>
+    </nav>
+
+    <section class="bg-slate-900 text-white py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+            <p class="text-brand-lime text-xs font-bold uppercase tracking-widest mb-3">Solutions &amp; Real Results</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-5">Industry-Specific Hybrid Automation</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">Tailored custom code + AI solutions for every segment of the logistics industry.</p>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-12">Who We Serve</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                <div class="img-fallback h-44"><img src="https://images.unsplash.com/photo-1601584115077-6c23ce0663a9?auto=format&fit=crop&w=600&q=85" alt="Freight forwarders" class="w-full h-44 object-cover" data-fallback="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=85" onerror="this.onerror=null;this.src=this.dataset.fallback;"></div>
+                <div class="p-6">
+                    <div class="w-10 h-10 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-3"><i data-lucide="ship" class="w-5 h-5"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Freight Forwarders</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Automate invoice processing, customs document parsing, and multi-carrier tracking with Python APIs + LLM workflows.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                <div class="img-fallback h-44"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=85" alt="3PL providers warehouse" class="w-full h-44 object-cover" data-fallback="https://images.unsplash.com/photo-1566576721346-d4a3938ea0ab?auto=format&fit=crop&w=600&q=85" onerror="this.onerror=null;this.src=this.dataset.fallback;"></div>
+                <div class="p-6">
+                    <div class="w-10 h-10 bg-emerald-50 text-brand-emerald rounded-lg flex items-center justify-center mb-3"><i data-lucide="warehouse" class="w-5 h-5"></i></div>
+                    <h3 class="text-lg font-bold mb-2">3PL Providers</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">WMS integrations, inventory webhook sync, and AI-driven dispatch email automation across warehouse operations.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                <div class="img-fallback h-44"><img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=600&q=85" alt="Shipping agencies port" class="w-full h-44 object-cover" data-fallback="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=600&q=85" onerror="this.onerror=null;this.src=this.dataset.fallback;"></div>
+                <div class="p-6">
+                    <div class="w-10 h-10 bg-lime-100 text-lime-700 rounded-lg flex items-center justify-center mb-3"><i data-lucide="anchor" class="w-5 h-5"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Shipping Agencies</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Real-time vessel tracking, automated client status updates, and document verification via OpenAI + REST API pipelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="bg-white py-16 md:py-24 border-y border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-4">Manual vs. Automind Systems Hybrid Solutions</h2>
+            <p class="text-gray-600 text-center mb-10 text-sm">See how custom code + AI replaces traditional manual workflows.</p>
+            <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-card">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            <th class="text-left px-5 py-4 font-semibold">Workflow Area</th>
+                            <th class="text-left px-5 py-4 font-semibold">Traditional Manual</th>
+                            <th class="text-left px-5 py-4 font-semibold text-brand-lime">Automind Hybrid Code + AI</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr class="bg-gray-50"><td class="px-5 py-4 font-medium text-gray-900">Invoice Processing</td><td class="px-5 py-4 text-gray-600">Manual data entry, hours per day, error-prone</td><td class="px-5 py-4 text-gray-800"><span class="text-brand-emerald font-semibold">OCR + LLM parsing</span> — automated, catches anomalies manual review misses</td></tr>
+                        <tr><td class="px-5 py-4 font-medium text-gray-900">Shipment Tracking</td><td class="px-5 py-4 text-gray-600">Check multiple carrier portals manually</td><td class="px-5 py-4 text-gray-800"><span class="text-brand-emerald font-semibold">Webhook + API aggregation</span> — real-time dashboard</td></tr>
+                        <tr class="bg-gray-50"><td class="px-5 py-4 font-medium text-gray-900">Customer Emails</td><td class="px-5 py-4 text-gray-600">Staff reads &amp; replies to inquiries one by one</td><td class="px-5 py-4 text-gray-800"><span class="text-brand-emerald font-semibold">AI classification + auto-responders</span> — most handled automatically</td></tr>
+                        <tr><td class="px-5 py-4 font-medium text-gray-900">System Integration</td><td class="px-5 py-4 text-gray-600">Copy-paste between TMS, ERP, spreadsheets</td><td class="px-5 py-4 text-gray-800"><span class="text-brand-emerald font-semibold">Python/Node.js REST APIs</span> — seamless sync</td></tr>
+                        <tr class="bg-gray-50"><td class="px-5 py-4 font-medium text-gray-900">Workflow Orchestration</td><td class="px-5 py-4 text-gray-600">Ad-hoc processes, no monitoring</td><td class="px-5 py-4 text-gray-800"><span class="text-brand-emerald font-semibold">Make.com + Zapier + custom code</span> — monitored end to end</td></tr>
+                        <tr><td class="px-5 py-4 font-medium text-gray-900">Deployment Speed</td><td class="px-5 py-4 text-gray-600">Months for enterprise software</td><td class="px-5 py-4 text-gray-800"><span class="text-brand-emerald font-semibold">Days to first automation live</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Audit Example (replaces fabricated case studies) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-3">What Our Audit Engine Actually Found</h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Not a hypothetical. We ran our audit engine against a real multi-year freight logistics statement and surfaced issues that had gone unnoticed for years.</p>
+
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-8 md:p-10 max-w-4xl mx-auto">
+            <div class="flex items-center gap-2 mb-5">
+                <span class="bg-blue-100 text-brand-blue text-xs font-bold px-2.5 py-1 rounded-full">Real Audit</span>
+                <span class="text-gray-400 text-xs font-medium">NAK Shipping &amp; Logistics · 2020–2024</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-8 leading-relaxed">A multi-year freight statement, audited automatically by the same engine that powers AuditLog. Every figure below came from that run — nothing here is illustrative.</p>
+            <div class="grid sm:grid-cols-2 gap-4 mb-2">
+                <div class="bg-gray-50 rounded-xl p-5">
+                    <p class="text-2xl font-extrabold text-brand-blue mb-1">39</p>
+                    <p class="text-xs text-gray-500">Payments referencing missing invoice numbers</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-5">
+                    <p class="text-2xl font-extrabold text-brand-emerald mb-1">$3.60</p>
+                    <p class="text-xs text-gray-500">Final balance discrepancy identified (approx. USD)</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-5">
+                    <p class="text-2xl font-extrabold text-brand-blue mb-1">Flagged</p>
+                    <p class="text-xs text-gray-500">Rate anomalies per container, auto-detected</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-5">
+                    <p class="text-2xl font-extrabold text-brand-emerald mb-1">4-sheet</p>
+                    <p class="text-xs text-gray-500">Audit report generated automatically</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-10">
+            <a href="https://audit-saas.vercel.app" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-blue-700 text-white font-semibold px-6 py-3.5 rounded-lg transition-all">See What Our Engine Finds in Your Statements <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-gray-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-14">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-10">
+                <div class="sm:col-span-2 lg:col-span-1"><div class="flex items-center gap-3 mb-4"><div class="relative logo-badge w-9 h-9 rounded-lg flex items-center justify-center"><i data-lucide="brain" class="w-4 h-4 text-white"></i></div><div class="leading-tight"><span class="text-white font-bold">Automind</span><span class="block text-[10px] font-semibold tracking-[0.15em] text-brand-blue uppercase">systems</span></div></div><p class="text-xs leading-relaxed max-w-xs">Automind Systems builds AuditLog and custom logistics automation. Python, Node.js, OpenAI, Claude, Make.com, Zapier &amp; REST APIs.</p></div>
+                <div><h4 class="text-white font-semibold text-sm mb-4">Quick Links</h4><ul class="space-y-2.5 text-xs"><li><a href="index.html" class="hover:text-white">Home</a></li><li><a href="about.html" class="hover:text-white">About Us</a></li><li><a href="services.html" class="hover:text-white">Services</a></li><li><a href="solutions.html" class="hover:text-white">Solutions</a></li></ul></div>
+                <div><h4 class="text-white font-semibold text-sm mb-4">Resources</h4><ul class="space-y-2.5 text-xs"><li><a href="blog.html" class="hover:text-white">Blog</a></li><li><a href="contact.html" class="hover:text-white">Contact</a></li><li><a href="#" class="hover:text-white">Privacy Policy</a></li><li><a href="#" class="hover:text-white">Terms of Service</a></li></ul></div>
+                <div><h4 class="text-white font-semibold text-sm mb-4">Contact Us</h4><ul class="space-y-3 text-xs"><li class="flex items-center gap-2.5"><i data-lucide="mail" class="w-4 h-4 text-brand-blue"></i><a href="mailto:hello@automindsystems.com" class="hover:text-white">hello@automindsystems.com</a></li><li class="flex items-center gap-2.5"><i data-lucide="phone" class="w-4 h-4 text-brand-blue"></i><a href="tel:0764190795" class="hover:text-white">0764190795</a></li><li class="flex items-center gap-2.5"><i data-lucide="clock" class="w-4 h-4 text-brand-blue"></i><span>Available 24/7</span></li></ul></div>
+            </div>
+            <div class="pt-6 border-t border-slate-800 text-xs flex flex-col sm:flex-row justify-between items-center gap-2"><p>&copy; 2025 Automind Systems. All rights reserved.</p><p class="text-gray-500">Custom Code + AI for logistics excellence</p></div>
+        </div>
+    </footer>
+    <script>lucide.createIcons(); document.getElementById('mobile-menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden');lucide.createIcons();});</script>
+</body>
+</html>
