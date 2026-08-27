@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inside a Real Logistics Audit: 6 Critical Flags, 12 Rate Anomalies, and $79,651 Exposure — Automind Systems</title>
+    <title>Inside a Real Logistics Audit: 6 Critical Flags, 12 Rate Anomalies, and $79,651 Exposure: Automind Systems</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { theme: { extend: { colors: { brand: { blue: '#2563EB', lime: '#84CC16', emerald: '#10B981' } }, fontFamily: { sans: ['Inter','system-ui','sans-serif'] }, boxShadow: { 'card': '0 4px 24px rgba(15,23,42,.08)', 'card-hover': '0 12px 40px rgba(15,23,42,.12)' } } } }
@@ -59,15 +59,15 @@
     <main class="max-w-3xl mx-auto py-16 px-4 sm:px-6">
         <article class="prose prose-lg text-gray-700 mx-auto">
             <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Why manual reconciliation breaks down</h2>
-            <p class="text-lg leading-relaxed">For many freight forwarders and logistics teams, reconciling carrier statements and invoices is a manual, spreadsheet-driven ritual. It scales poorly: a single multi-year account can contain thousands of rows, dozens of formats, and a host of human errors. Small mismatches — a mistyped invoice number, a shifted date column from an Excel export, or an inconsistent rate notation — slip past spot checks and quietly accumulate into material discrepancies.</p>
+            <p class="text-lg leading-relaxed">For many freight forwarders and logistics teams, reconciling carrier statements and invoices is a manual, spreadsheet-driven ritual. It scales poorly: a single multi-year account can contain thousands of rows, dozens of formats, and a host of human errors. Small mismatches, such as a mistyped invoice number, a shifted date column from an Excel export, or an inconsistent rate notation, slip past spot checks and quietly accumulate into material discrepancies.</p>
 
             <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What we did</h2>
             <p class="text-lg leading-relaxed">To understand the failure modes, the audit engine was run against a real multi-year freight statement spanning 2020–2024. The dataset included hundreds of invoice line items across multiple carriers, with mixed Excel and CSV sources, legacy Excel-formatted exports, and manual journal entries. The goal was to surface mismatches, anomalous rates, and any silently corrupted fields that a human reviewer would likely miss.</p>
 
             <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What it found</h2>
             <ul class="text-lg leading-relaxed space-y-2">
-                <li>6 critical-severity flags found — including genuine ghost payments referencing missing invoices, plus related balance and ledger mismatches.</li>
-                <li>12 high-severity rate anomalies flagged per container by comparing each line against the account's median rates — a number of shipments showed rates 40–60% higher than the recent median for similar routes and container sizes.</li>
+                <li>6 critical-severity flags found, including genuine ghost payments referencing missing invoices, plus related balance and ledger mismatches.</li>
+                <li>12 high-severity rate anomalies flagged per container by comparing each line against the account's median rates, with a number of shipments showing rates 40–60% higher than the recent median for similar routes and container sizes.</li>
                 <li>$79,651 in total estimated financial exposure identified across 224 real statement rows.</li>
                 <li>Formatting issues, including Excel serial date bugs that had silently corrupted date fields during CSV round-trips, producing shifted dates or epoch-like numeric values in some rows.</li>
             </ul>
