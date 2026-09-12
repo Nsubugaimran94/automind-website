@@ -183,7 +183,12 @@
             <div class="pt-6 border-t border-slate-800 text-xs flex flex-col sm:flex-row justify-between items-center gap-2"><p>&copy; 2025 Automind Systems. All rights reserved.</p><p class="text-gray-500">Custom Code + AI for logistics excellence</p></div>
         </div>
     </footer>
-    <script>lucide.createIcons(); document.getElementById('mobile-menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden');lucide.createIcons();});
+    <script>
+        lucide.createIcons();
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+            lucide.createIcons();
+        });
         document.querySelectorAll('.js-audit-cta').forEach(function(el) {
             el.addEventListener('click', function() {
                 if (typeof gtag === 'function') {
@@ -201,6 +206,7 @@
                     });
                 }
             });
-        });</script>
+        });
+    </script>
 </body>
 </html>
